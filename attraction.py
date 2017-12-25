@@ -18,13 +18,18 @@ class SpiderMain(object):
              if n == 0:
                  attractions['name']=div.a.string
                  attractions['point']=div.em.string
+                 attraction.append(attractions)
              elif n == 1:
                  attractions['name'] = div.a.string
                  attractions['point'] = div.em.string
+                 attraction.append(attractions)
              elif n == 2:
                  attractions['name'] = div.a.string
                  attractions['point'] = div.em.string
-             elif n==3:
                  attraction.append(attractions)
-             return attraction
+             elif n==3:
+                 n = 0
+                 attraction.append(attractions)
+                 break
+         return attraction
 
