@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import jsonify
-import test
+import attraction
 app=Flask(__name__)
 @app.route('/')
 def test_flask():
@@ -8,9 +8,8 @@ def test_flask():
 
 @app.route('/')
 def spider_hot():
-    root_url='http:www.pythontab.com/'
-    spider=test.attraction()
-    attractions=spider.Crawl(root_url)
+    spider=attraction.SpiderMain()
+    attractions=spider.Crawl()
     return jsonify(attractions)
 
 if __name__=='__main__':
