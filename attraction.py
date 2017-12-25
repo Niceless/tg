@@ -1,5 +1,5 @@
 #coding=utf-8
-import requests
+import urllib.request
 from bs4 import BeautifulSoup
 
 class SpiderMain(object):
@@ -7,8 +7,11 @@ class SpiderMain(object):
      hot_url=url
      if url is None:
          return None
-     response = requests.get(hot_url)
-     soup = BeautifulSoup(response.text, "html.parser")
+     response = urllib.request.urlopen(hot_url)
+     if response.getcode() != 200:
+         return None
+     htmldata=response.read()
+     soup = BeautifulSoup(htmldata, "html.parser")
      attraction = []
      for day in soup.findAll(class_='child-noborder'):
          i = day.findAll("li")
