@@ -6,5 +6,5 @@ setup(name='tg',
 	  author='Tan Y',
 	  author_email='pat1encelos@tongji.edu.cn',
       url='http://www.python.org/sigs/distutils-sig/',
-	  install_requires=['Flask>=0.10.1','BeautifulSoup4'],
+	  install_requires=['Flask>=0.10.1','BeautifulSoup4>=4.6.0','requests==2.7.0'],
 	  )
