@@ -16,20 +16,22 @@ class SpiderMain(object):
          for div in i:
              attractions = {}
              if n == 0:
-                 attractions['name']=div.a.string
-                 attractions['point']=div.em.string
-                 attraction.append(attractions)
+                attractions['name'] = div.a.string
+                attractions['point'] = div.em.string
+                print attractions['name']
              elif n == 1:
                  attractions['name'] = div.a.string
                  attractions['point'] = div.em.string
-                 attraction.append(attractions)
+                 print attractions['name']
              elif n == 2:
                  attractions['name'] = div.a.string
                  attractions['point'] = div.em.string
-                 attraction.append(attractions)
+                 print attractions['name']
              elif n==3:
-                 n = 0
-                 attraction.append(attractions)
-                 break
+                attraction.append(attractions)
+                break
+             n += 1
+
          return attraction
+
 
