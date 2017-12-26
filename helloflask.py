@@ -2,9 +2,9 @@ from flask import Flask
 from flask import jsonify
 import attraction
 app=Flask(__name__)
-@app.route('/')
-def hello_flask():
-    return 'hello_flask'
+#@app.route('/')
+#def hello_flask():
+ #   return 'hello_flask'
 
 @app.route('/')
 def spider_hot():
