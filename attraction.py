@@ -10,7 +10,7 @@ class SpiderMain(object):
         response = requests.get(hot_url)
         soup = BeautifulSoup(response.text, "html.parser")
         attraction = []
-        for day in soup.findAll(class_='child-noborder'):
+        for day in soup.findAll('ol',class_='child-noborder'):
              i = day.findAll("li")
              n = 0
              for div in i:
