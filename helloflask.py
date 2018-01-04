@@ -1,12 +1,7 @@
 from flask import Flask
 from flask import jsonify
 import attraction
-import json
 app=Flask(__name__)
-@app.route('/')
-#def hello_flask():
- #   return 'hello_flask'
-
 @app.route('/')
 def spider_hot():
     root_url='http://www.cncn.com/paihang/'
@@ -15,5 +10,4 @@ def spider_hot():
     return jsonify(attractions)
   
 if __name__=='__main__':
- #app.config['JSON_AS_ASCII'] = False
  app.run()
